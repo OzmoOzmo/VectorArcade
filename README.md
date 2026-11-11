@@ -3,7 +3,8 @@
 This PlatformIO Arduino project runs 3 vector games on the original ESP32. The built-in 8-bit DAC renderer is selected by default and outputs X on GPIO25 (DAC1) and Y on GPIO26 (DAC2). These are analog outputs for compatible XY display hardware, typically an Oscilloscope
 althought there is an option to display on an LCD video - it has been tested on various Oscilloscopes and on the built in display of a Weemos Esp32 with built in 0.96 OLED display.
 
-There are 3 games - two written from scratch (Lunar Lander and Millle Command) and one a port of a Astroids.
+There are 3 games - two written from scratch (Lunar Lander and Missile Command) and one a port and improved version of a Astroids Game found on bitluni's github although Im not sure who original author was.
+
 There are several methods of imputs - Joystick is preferred - but you can use a rotary controller.
 
 Ambrose Clarke
