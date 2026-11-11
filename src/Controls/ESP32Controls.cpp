@@ -1,0 +1,27 @@
+#include "ESP32Controls.hpp"
+#include "RotaryEncoder.hpp"
+#include "Button.hpp"
+#include <Arduino.h>
+
+ESP32Controls::ESP32Controls(RotaryEncoder *rotary_encoder, Button *fire_button, Button *thrust_button) : rotary_encoder(rotary_encoder), fire_button(fire_button), thrust_button(thrust_button)
+{
+}
+
+bool ESP32Controls::is_firing()
+{
+  //return fire_button->get_button_pushed();
+  bool bFire = fire_button->get_button_pushed();
+  if (bFire)
+    Serial.print("Fire! ");
+  return bFire;
+}
+
+bool ESP32Controls::is_thrusting()
+{
+  return thrust_button->get_button_pushed();
+}
+
+float ESP32Controls::get_direction()
+{
+  return rotary_encoder->get_angle();
+}
